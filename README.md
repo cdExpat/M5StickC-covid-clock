@@ -11,6 +11,6 @@ Pressing in the B-button will increase the brightness (unless in the update scre
 
 Pressing the home button will scroll through the different screens.
 
-<img src = "media/clock.png" raw=true alt=“My clock” style=“margin-right: 40px;” />
+<img src = "./media/clock.png" raw=true alt=“My clock” style=“margin-right: 40px;” />
 
 
