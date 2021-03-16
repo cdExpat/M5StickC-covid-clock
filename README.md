@@ -11,4 +11,6 @@ Clicking on the B-button will increase the brightness (unless in the update scre
 
 ![My Clock](https://github.com/cdExpat/M5StickC-covid-clock/blob/main/media/clock.png)
 
+You can add 3 different WiFi connections, for security reasons I replaced mine with ***** :-)
 
+🦖
