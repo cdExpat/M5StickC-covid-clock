@@ -1,5 +1,4 @@
 #include <M5StickC.h>
-//#include "Seeed_BME280.h"
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
 #include <Arduino.h> 
@@ -11,7 +10,6 @@
 #define SEALEVELPRESSURE_HPA (1013.25)
 
 Adafruit_BME280 bme;
-//BME280 bme280;
 WiFiClientSecure client;
 HttpClient http(client,"covid19.who.int", 443);
 
@@ -145,7 +143,6 @@ void menu_loop() {
     redraw_clock=false;
     unsigned status;
     status = bme.begin(Addr,&Wire);
-    //status = bme280.init();
     if (!status) {
         Serial.println("No BME280 found");
         menu_loop();
@@ -356,8 +353,6 @@ void draw_temp_screen() {
       M5.Lcd.setTextColor(TFT_BLACK);
       String temp_Value=String(bme.readTemperature(),1);
       String humi_Value=String(bme.readHumidity(),0);
-      //String temp_Value=String(bme280.getTemperature(),1);
-      //String humi_Value=String(bme280.getHumidity());
       M5.Lcd.fillRect(89, 7, 70 ,65, ORANGE);
       M5.Lcd.drawString(temp_Value, 90, 5, 2);
       M5.Lcd.drawString(humi_Value, 90, 40, 2);
